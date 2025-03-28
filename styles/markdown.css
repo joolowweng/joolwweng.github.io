@@ -9,7 +9,7 @@ body {
     margin-right: 0%;
     padding: 0 0%;
     font-size: 1.1em;
-    max-width: fit-content;
+    max-width: 100%;
   }
 
   @media (min-width: 1201px) {
@@ -39,7 +39,7 @@ body {
   border-radius: 10px;
   box-shadow: 0 20px 30px -10px rgb(16 16 39 / 5%);
   margin: 0 auto;
-  display: block;
+  display: inline-block;
 }
 
 .vscode-body img[alt="avatar"] {
@@ -49,7 +49,6 @@ body {
   box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
   margin: 0 auto;
   display: block;
-  position: relative;
 }
 
 .vscode-body p {

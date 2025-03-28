@@ -1,5 +1,5 @@
-<link rel="preload" href="/styles/markdown.css" as="style">
+<!-- <link rel="preload" href="/styles/markdown.css" as="style"> -->
 
-## Joolow
+![avatar](assets/avatar.jpeg)
 
-> Hello world
+> Make Programming Great Again
