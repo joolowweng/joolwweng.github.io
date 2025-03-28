@@ -1,0 +1,111 @@
+body {
+  color: #000000;
+  /* #c6d0f5; */
+  background: #ffffff;
+  font: 1.1em "Calibri", "Microsoft YaHei UI";
+  line-height: 1.5;
+  /* margin: 20px 20px; */
+
+  @media (min-width: 0px) and (max-width: 1200px) {
+    margin-left: 0%;
+    margin-right: 0%;
+    padding: 0 0%;
+    font-size: 1.1em;
+    max-width: fit-content;
+  }
+
+  @media (min-width: 1201px) {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}
+
+code {
+  font-family: "Courier New", "Microsoft YaHei UI";
+  font-size: 1em;
+  display: inline-block;
+  color: #000000;
+  background-color: #ffd500;
+  border-radius: 20% 25% 20% 24%;
+  transform: rotate(1deg);
+  position: relative;
+}
+
+/* h1 {
+    text-transform: capitalize;
+    text-align: center;
+    font-size: 100%;
+    border-bottom: none;
+}
+
+h2 {
+    text-transform: capitalize;
+    font-size: 200%;
+    border-bottom: none;
+}
+
+h3 {
+    text-transform: capitalize;
+    font-size: 150%;
+    border-bottom: none;
+} */
+
+img[alt="sm"] {
+  max-width: 50%;
+}
+
+img[alt="md"] {
+  max-width: 80%;
+}
+
+p {
+  text-align: left;
+  /* top | right | bottom | left */
+  margin: 20px 0 20px 0;
+}
+
+blockquote {
+  border-left: 4px solid #42b983;
+  color: #777;
+  background-color: rgba(66, 185, 131, 0.1);
+  max-width: fit-content;
+  text-align: left;
+  font: 0.9em;
+  line-height: 1.5;
+}
+
+table {
+  padding: 0;
+  word-break: initial;
+  font: 1em "Calibri", "Microsoft YaHei UI";
+  width: 100%;
+}
+
+.vscode-body table tr th {
+  font-weight: bold;
+  border: 1px solid #dfe2e5;
+  background-color: #fafafa;
+  text-align: left;
+  margin: 0;
+  padding: 6px 13px;
+}
+
+.vscode-body table tr td {
+  border: 1px solid #dfe2e5;
+  text-align: left;
+  margin: 0;
+  padding: 6px 13px;
+}
+
+.vscode-body table tr td:first-child {
+  margin-top: 0;
+  width: 15%;
+}
+
+.vscode-body table tr td:last-child {
+  margin-bottom: 0;
+}
+
+.vscode-body table tr:nth-child(2n) {
+  background-color: #fafafa;
+}
