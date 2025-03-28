@@ -1,10 +1,8 @@
 body {
   color: #000000;
-  /* #c6d0f5; */
-  background: #ffffff;
-  font: 1.1em "Calibri", "Microsoft YaHei UI";
+  background: white;
+  font: 1em "helvetica", "Microsoft YaHei UI";
   line-height: 1.5;
-  /* margin: 20px 20px; */
 
   @media (min-width: 0px) and (max-width: 1200px) {
     margin-left: 0%;
@@ -20,81 +18,116 @@ body {
   }
 }
 
-code {
-  font-family: "Courier New", "Microsoft YaHei UI";
+.vscode-body input.task-list-item-checkbox {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.vscode-body strong {
+  color: #000000;
+  font-weight: bold;
   font-size: 1em;
   display: inline-block;
-  color: #000000;
   background-color: #ffd500;
   border-radius: 20% 25% 20% 24%;
-  transform: rotate(1deg);
   position: relative;
 }
 
-/* h1 {
-    text-transform: capitalize;
-    text-align: center;
-    font-size: 100%;
-    border-bottom: none;
-}
-
-h2 {
-    text-transform: capitalize;
-    font-size: 200%;
-    border-bottom: none;
-}
-
-h3 {
-    text-transform: capitalize;
-    font-size: 150%;
-    border-bottom: none;
-} */
-
-img[alt="sm"] {
-  max-width: 50%;
-}
-
-img[alt="md"] {
+.vscode-body img {
   max-width: 80%;
+  border-radius: 10px;
+  box-shadow: 0 20px 30px -10px rgb(16 16 39 / 5%);
+  margin: 0 auto;
+  display: block;
 }
 
-p {
+.vscode-body img[alt="avatar"] {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+  margin: 0 auto;
+  display: block;
+  position: relative;
+}
+
+.vscode-body p {
   text-align: left;
   /* top | right | bottom | left */
   margin: 20px 0 20px 0;
 }
 
-blockquote {
-  border-left: 4px solid #42b983;
-  color: #777;
-  background-color: rgba(66, 185, 131, 0.1);
-  max-width: fit-content;
-  text-align: left;
-  font: 0.9em;
-  line-height: 1.5;
+.vscode-body a:hover {
+  color: #00d0ea;
+}
+.vscode-body blockquote {
+  border: none;
+  border-radius: 20px;
+  padding: 0px 15px 0px 15px;
+  margin-left: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: inline-block;
+  background: linear-gradient(to bottom, #00d0ea 0%, #0085d1 100%);
+  background-attachment: fixed;
+  position: relative;
 }
 
-table {
+.vscode-body blockquote p {
+  color: white;
+  margin: 0;
+  padding: 5px 5px;
+}
+
+.vscode-body blockquote:before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  bottom: 0;
+  left: -7px;
+  height: 20px;
+  width: 20px;
+  background: linear-gradient(to bottom, #00d0ea 0%, #0085d1 100%);
+  background-attachment: fixed;
+  border-bottom-right-radius: 15px;
+}
+
+.vscode-body blockquote:after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: -10px;
+  width: 10px;
+  height: 20px;
+  background: white;
+  border-bottom-right-radius: 10px;
+}
+
+.vscode-body table {
   padding: 0;
+  display: block;
   word-break: initial;
-  font: 1em "Calibri", "Microsoft YaHei UI";
   width: 100%;
 }
 
 .vscode-body table tr th {
-  font-weight: bold;
   border: 1px solid #dfe2e5;
+  font-weight: bold;
   background-color: #fafafa;
-  text-align: left;
   margin: 0;
   padding: 6px 13px;
 }
 
 .vscode-body table tr td {
   border: 1px solid #dfe2e5;
-  text-align: left;
   margin: 0;
   padding: 6px 13px;
+}
+
+.vscode-body table tr:nth-child(n):hover {
+  background-color: #f0f0f0;
 }
 
 .vscode-body table tr td:first-child {
@@ -108,4 +141,18 @@ table {
 
 .vscode-body table tr:nth-child(2n) {
   background-color: #fafafa;
+}
+
+.vscode-body pre {
+  background-color: #fafafa;
+  border-radius: 10px;
+  margin-top: 0;
+  margin-bottom: 0;
+  box-shadow: 0 20px 30px -10px rgb(16 16 39 / 5%);
+}
+
+.vscode-body code {
+  font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas,
+    Liberation Mono, monospace;
+  font-size: 12px;
 }
