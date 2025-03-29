@@ -18,13 +18,13 @@ body {
   }
 }
 
-.vscode-body input.task-list-item-checkbox {
+input.task-list-item-checkbox {
   width: 20px;
   height: 20px;
   margin-right: 10px;
 }
 
-.vscode-body strong {
+strong {
   color: #000000;
   font-weight: bold;
   font-size: 1em;
@@ -34,7 +34,7 @@ body {
   position: relative;
 }
 
-.vscode-body img {
+img {
   max-width: 80%;
   border-radius: 10px;
   box-shadow: 0 20px 30px -10px rgb(16 16 39 / 5%);
@@ -42,7 +42,7 @@ body {
   display: inline-block;
 }
 
-.vscode-body img[alt="avatar"] {
+img[alt="avatar"] {
   width: 100px;
   height: 100px;
   border-radius: 50%;
@@ -51,17 +51,17 @@ body {
   display: block;
 }
 
-.vscode-body p {
+p {
   text-align: left;
   /* top | right | bottom | left */
   margin: 20px 0 20px 0;
 }
 
-.vscode-body a:hover {
+a:hover {
   color: #00d0ea;
 }
 
-.vscode-body blockquote {
+blockquote {
   border: none;
   border-radius: 20px;
   padding: 0px 15px 0px 15px;
@@ -74,13 +74,13 @@ body {
   position: relative;
 }
 
-.vscode-body blockquote p {
+blockquote p {
   color: white;
   margin: 0;
   padding: 5px 5px;
 }
 
-.vscode-body blockquote:before {
+blockquote:before {
   content: "";
   position: absolute;
   z-index: 0;
@@ -93,7 +93,7 @@ body {
   border-bottom-right-radius: 15px;
 }
 
-.vscode-body blockquote:after {
+blockquote:after {
   content: "";
   position: absolute;
   z-index: 1;
@@ -105,14 +105,14 @@ body {
   border-bottom-right-radius: 10px;
 }
 
-.vscode-body table {
+table {
   padding: 0;
   display: block;
   word-break: initial;
   width: 100%;
 }
 
-.vscode-body table tr th {
+table tr th {
   border: 1px solid #dfe2e5;
   font-weight: bold;
   background-color: #fafafa;
@@ -120,30 +120,30 @@ body {
   padding: 6px 13px;
 }
 
-.vscode-body table tr td {
+table tr td {
   border: 1px solid #dfe2e5;
   margin: 0;
   padding: 6px 13px;
 }
 
-.vscode-body table tr:nth-child(n):hover {
+table tr:nth-child(n):hover {
   background-color: #f0f0f0;
 }
 
-.vscode-body table tr td:first-child {
+table tr td:first-child {
   margin-top: 0;
   width: 15%;
 }
 
-.vscode-body table tr td:last-child {
+table tr td:last-child {
   margin-bottom: 0;
 }
 
-.vscode-body table tr:nth-child(2n) {
+table tr:nth-child(2n) {
   background-color: #fafafa;
 }
 
-.vscode-body pre {
+pre {
   background-color: #fafafa;
   border-radius: 10px;
   margin-top: 0;
@@ -151,7 +151,7 @@ body {
   box-shadow: 0 20px 30px -10px rgb(16 16 39 / 5%);
 }
 
-.vscode-body code {
+code {
   font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas,
     Liberation Mono, monospace;
   font-size: 12px;
