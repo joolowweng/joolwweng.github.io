@@ -1,3 +1,8 @@
+---
+---
+
+@import "{{ site.theme }}";
+
 body {
   color: #000000;
   background: white;
@@ -158,5 +163,5 @@ body {
 }
 
 .vscode-body footer {
-  text-align: center;
+  align-items: center;
 }
