@@ -1,15 +1,12 @@
 ---
 layout: post
 title: "Hello World"
-date: 2023-01-01 12:00:00 +0800
 categories: general
 ---
 
 > This is a blockquote that will use my custom styling.
 
 **Important note:** This text will have highlight styling.
-
-![avatar](/assets/images/avatar.jpg)
 
 ## Code Example
 

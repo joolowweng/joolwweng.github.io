@@ -149,14 +149,6 @@ body {
   background-color: #fafafa;
 }
 
-.vscode-body pre {
-  background-color: #fafafa;
-  border-radius: 10px;
-  margin-top: 0;
-  margin-bottom: 0;
-  box-shadow: 0 20px 30px -10px rgb(16 16 39 / 5%);
-}
-
 .vscode-body code {
   font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas,
     Liberation Mono, monospace;
@@ -165,6 +157,15 @@ body {
 
 .vscode-body footer {
   align-items: center;
+}
+
+.vscode-body pre,
+.highlight pre {
+  background-color: #fafafa;
+  border-radius: 10px;
+  margin-top: 0;
+  margin-bottom: 0;
+  box-shadow: 0 20px 30px -10px rgb(16 16 39 / 5%);
 }
 
 .highlight pre code {
@@ -181,5 +182,14 @@ body {
   &:before,
   &:after {
     content: normal;
+  }
+}
+
+.highlight {
+  margin-bottom: 1rem;
+
+  pre {
+    margin-bottom: 0;
+    word-break: normal;
   }
 }
