@@ -62,8 +62,13 @@ body {
   margin: 20px 0 20px 0;
 }
 
-.vscode-body a:hover {
-  color: #00d0ea;
+.vscode-body a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+    color: #00d0ea;
+  }
 }
 
 .vscode-body blockquote {
@@ -164,4 +169,21 @@ body {
 
 .vscode-body footer {
   align-items: center;
+}
+
+.highlight pre code {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+
+  &:before,
+  &:after {
+    content: normal;
+  }
 }
