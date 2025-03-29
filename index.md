@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Home
+title: Joolowweng
 ---
 
-# Welcome to My Website
+![avatar](assets/images/avatar.jpeg)
 
-This is a GitHub Pages site using Jekyll with my custom markdown CSS styling.
+> Make Programming Great Again
 
 ## Recent Posts
 
@@ -13,7 +13,3 @@ This is a GitHub Pages site using Jekyll with my custom markdown CSS styling.
 
 - [{{ post.title }}]({{ site.baseurl }}{{ post.url }}) - {{ post.date | date: "%B %d, %Y" }}
   {% endfor %}
-
-![avatar](assets/avatar.jpeg)
-
-> Make Programming Great Again

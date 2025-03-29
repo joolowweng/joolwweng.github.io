@@ -3,7 +3,7 @@
 
 @import "{{ site.theme }}";
 
-body {
+.vscode-body body {
   color: #000000;
   background: white;
   font: 1em "helvetica", "Microsoft YaHei UI";
@@ -23,13 +23,13 @@ body {
   }
 }
 
-input.task-list-item-checkbox {
+.vscode-body input.task-list-item-checkbox {
   width: 20px;
   height: 20px;
   margin-right: 10px;
 }
 
-strong {
+.vscode-body strong {
   color: #000000;
   font-weight: bold;
   font-size: 1em;
@@ -39,7 +39,7 @@ strong {
   position: relative;
 }
 
-img {
+.vscode-body img {
   max-width: 80%;
   border-radius: 10px;
   box-shadow: 0 20px 30px -10px rgb(16 16 39 / 5%);
@@ -47,7 +47,7 @@ img {
   display: inline-block;
 }
 
-img[alt="avatar"] {
+.vscode-body img[alt="avatar"] {
   width: 100px;
   height: 100px;
   border-radius: 50%;
@@ -56,17 +56,17 @@ img[alt="avatar"] {
   display: block;
 }
 
-p {
+.vscode-body p {
   text-align: left;
   /* top | right | bottom | left */
   margin: 20px 0 20px 0;
 }
 
-a:hover {
+.vscode-body a:hover {
   color: #00d0ea;
 }
 
-blockquote {
+.vscode-body blockquote {
   border: none;
   border-radius: 20px;
   padding: 0px 15px 0px 15px;
@@ -79,13 +79,13 @@ blockquote {
   position: relative;
 }
 
-blockquote p {
+.vscode-body blockquote p {
   color: white;
   margin: 0;
   padding: 5px 5px;
 }
 
-blockquote:before {
+.vscode-body blockquote:before {
   content: "";
   position: absolute;
   z-index: 0;
@@ -98,7 +98,7 @@ blockquote:before {
   border-bottom-right-radius: 15px;
 }
 
-blockquote:after {
+.vscode-body blockquote:after {
   content: "";
   position: absolute;
   z-index: 1;
@@ -110,14 +110,14 @@ blockquote:after {
   border-bottom-right-radius: 10px;
 }
 
-table {
+.vscode-body table {
   padding: 0;
   display: block;
   word-break: initial;
   width: 100%;
 }
 
-table tr th {
+.vscode-body table tr th {
   border: 1px solid #dfe2e5;
   font-weight: bold;
   background-color: #fafafa;
@@ -125,30 +125,30 @@ table tr th {
   padding: 6px 13px;
 }
 
-table tr td {
+.vscode-body table tr td {
   border: 1px solid #dfe2e5;
   margin: 0;
   padding: 6px 13px;
 }
 
-table tr:nth-child(n):hover {
+.vscode-body table tr:nth-child(n):hover {
   background-color: #f0f0f0;
 }
 
-table tr td:first-child {
+.vscode-body table tr td:first-child {
   margin-top: 0;
   width: 15%;
 }
 
-table tr td:last-child {
+.vscode-body table tr td:last-child {
   margin-bottom: 0;
 }
 
-table tr:nth-child(2n) {
+.vscode-body table tr:nth-child(2n) {
   background-color: #fafafa;
 }
 
-pre {
+.vscode-body pre {
   background-color: #fafafa;
   border-radius: 10px;
   margin-top: 0;
@@ -156,7 +156,7 @@ pre {
   box-shadow: 0 20px 30px -10px rgb(16 16 39 / 5%);
 }
 
-code {
+.vscode-body code {
   font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas,
     Liberation Mono, monospace;
   font-size: 12px;
