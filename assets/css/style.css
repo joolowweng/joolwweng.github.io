@@ -10,8 +10,8 @@
   line-height: 1.5;
 
   @media (min-width: 0px) and (max-width: 1200px) {
-    margin-left: 0%;
-    margin-right: 0%;
+    margin-left: 10%;
+    margin-right: 10%;
     padding: 0 0%;
     font-size: 1.1em;
     max-width: 100%;
@@ -160,4 +160,8 @@
   font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas,
     Liberation Mono, monospace;
   font-size: 12px;
+}
+
+.vscode-body footer {
+  text-align: center;
 }
