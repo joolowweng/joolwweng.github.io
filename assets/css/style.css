@@ -1,9 +1,4 @@
----
----
-
-@import "{{ site.theme }}";
-
-.vscode-body body {
+body {
   color: #000000;
   background: white;
   font: 1em "helvetica", "Microsoft YaHei UI";
