@@ -7,6 +7,7 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 markdown: kramdown
 highlighter: rouge
 theme: null
+permalink: /:title/
 
 # Exclude files from being included in the build
 exclude:
