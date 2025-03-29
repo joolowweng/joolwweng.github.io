@@ -22,6 +22,9 @@ body {
   width: 20px;
   height: 20px;
   margin-right: 10px;
+  vertical-align: middle;
+  position: relative;
+  top: -0.1em;
 }
 
 .vscode-body strong {
@@ -32,6 +35,11 @@ body {
   background-color: #ffd500;
   border-radius: 20% 25% 20% 24%;
   position: relative;
+}
+
+.vscode-body em {
+  color: red;
+  font-family: "Caveat", cursive;
 }
 
 .vscode-body img {
@@ -113,7 +121,7 @@ body {
 
 .vscode-body table {
   padding: 0;
-  border-collapse: collapse;
+  border-collapse: separate;
   border-spacing: 0;
   display: table;
   word-break: initial;
@@ -121,20 +129,54 @@ body {
   margin-top: 0;
   margin-bottom: 16px;
   overflow: auto;
+  border: 1px solid #dfe2e5;
+  border-radius: 8px;
 }
 
 .vscode-body table tr th {
   border: 1px solid #dfe2e5;
+  border-top: none;
+  border-left: none;
   font-weight: bold;
   background-color: #fafafa;
   margin: 0;
   padding: 6px 13px;
 }
 
+.vscode-body table tr th:first-child {
+  border-left: none;
+}
+
+.vscode-body table tr th:last-child {
+  border-right: none;
+}
+
+.vscode-body table tr:first-child th:first-child {
+  border-top-left-radius: 8px;
+}
+
+.vscode-body table tr:first-child th:last-child {
+  border-top-right-radius: 8px;
+}
+
 .vscode-body table tr td {
   border: 1px solid #dfe2e5;
+  border-left: none;
+  border-bottom: none;
   margin: 0;
   padding: 6px 13px;
+}
+
+.vscode-body table tr td:last-child {
+  border-right: none;
+}
+
+.vscode-body table tr:last-child td:first-child {
+  border-bottom-left-radius: 8px;
+}
+
+.vscode-body table tr:last-child td:last-child {
+  border-bottom-right-radius: 8px;
 }
 
 .vscode-body table tr:nth-child(n):hover {
@@ -143,7 +185,9 @@ body {
 
 .vscode-body table tr td:first-child {
   margin-top: 0;
-  width: 15%;
+  width: auto;
+  white-space: nowrap;
+  min-width: min-content;
 }
 
 .vscode-body table tr td:last-child {
