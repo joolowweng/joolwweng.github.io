@@ -113,9 +113,14 @@ body {
 
 .vscode-body table {
   padding: 0;
-  display: block;
+  border-collapse: collapse;
+  border-spacing: 0;
+  display: table;
   word-break: initial;
   width: 100%;
+  margin-top: 0;
+  margin-bottom: 16px;
+  overflow: auto;
 }
 
 .vscode-body table tr th {
@@ -149,35 +154,34 @@ body {
   background-color: #fafafa;
 }
 
+.vscode-body footer {
+  display: flex;
+  justify-content: center;
+  font: 0.8em "helvetica", "Microsoft YaHei UI";
+}
+
+.vscode-body pre {
+  background-color: #f6f8fa;
+  border-radius: 6px;
+  margin-top: 0;
+  margin-bottom: 16px;
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  border: 1px solid #d0d7de;
+  box-shadow: none;
+}
+
 .vscode-body code {
   font-family: ui-monospace, SFMono-Regular, SF Mono, Menlo, Consolas,
     Liberation Mono, monospace;
-  font-size: 12px;
-}
-
-.vscode-body footer {
-  align-items: center;
-}
-
-.vscode-body pre,
-.highlight pre {
-  background-color: #fafafa;
-  border-radius: 10px;
-  margin-top: 0;
-  margin-bottom: 0;
-  box-shadow: 0 20px 30px -10px rgb(16 16 39 / 5%);
-}
-
-.highlight pre code {
-  display: inline;
-  max-width: initial;
-  padding: 0;
+  font-size: 85%;
+  padding: 0.2em 0.4em;
   margin: 0;
-  overflow: initial;
-  line-height: inherit;
-  word-wrap: normal;
-  background-color: transparent;
-  border: 0;
+  border-radius: 3px;
+  background-color: rgba(175, 184, 193, 0.2);
+  word-wrap: break-word;
 
   &:before,
   &:after {
@@ -185,11 +189,176 @@ body {
   }
 }
 
-.highlight {
-  margin-bottom: 1rem;
+.vscode-body pre code {
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+  display: inline-block;
+  width: 100%;
+}
 
-  pre {
-    margin-bottom: 0;
-    word-break: normal;
-  }
+/* Add break line styling for headings */
+.vscode-body h1,
+.vscode-body h2,
+.vscode-body h3,
+.vscode-body h4,
+.vscode-body h5,
+.vscode-body h6 {
+  margin-bottom: 16px;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid #eaecef;
+}
+
+.vscode-body h1 {
+  font-size: 2em;
+  margin-top: 24px;
+}
+
+.vscode-body h2 {
+  font-size: 1.5em;
+  margin-top: 24px;
+}
+
+.vscode-body h3 {
+  font-size: 1.25em;
+  margin-top: 20px;
+}
+
+.vscode-body h4 {
+  font-size: 1em;
+  margin-top: 16px;
+}
+
+.vscode-body h5 {
+  font-size: 0.875em;
+  margin-top: 16px;
+}
+
+.vscode-body h6 {
+  font-size: 0.85em;
+  margin-top: 16px;
+  color: #6a737d;
+}
+
+/* Additional GitHub-specific language colors */
+.vscode-body .language-json .hljs-property {
+  color: #032f62;
+}
+
+.vscode-body .language-javascript .hljs-keyword {
+  color: #d73a49;
+}
+
+.vscode-body .language-javascript .hljs-template-string {
+  color: #032f62;
+}
+
+/* GitHub-style syntax highlighting for GitHub Pages */
+.vscode-body .highlight .c,
+.vscode-body .highlight .c1,
+.vscode-body .highlight .cm,
+.vscode-body .highlight .cs {
+  color: #6a737d; /* Comments */
+}
+
+.vscode-body .highlight .k,
+.vscode-body .highlight .kd,
+.vscode-body .highlight .kn,
+.vscode-body .highlight .kp,
+.vscode-body .highlight .kr,
+.vscode-body .highlight .kt {
+  color: #d73a49; /* Keywords */
+}
+
+.vscode-body .highlight .m,
+.vscode-body .highlight .mi,
+.vscode-body .highlight .mf,
+.vscode-body .highlight .mh,
+.vscode-body .highlight .il {
+  color: #005cc5; /* Numbers */
+}
+
+.vscode-body .highlight .s,
+.vscode-body .highlight .sb,
+.vscode-body .highlight .sc,
+.vscode-body .highlight .s1,
+.vscode-body .highlight .s2,
+.vscode-body .highlight .sd,
+.vscode-body .highlight .sh {
+  color: #032f62; /* Strings */
+}
+
+.vscode-body .highlight .na,
+.vscode-body .highlight .nx {
+  color: #6f42c1; /* Names/attributes */
+}
+
+.vscode-body .highlight .nc,
+.vscode-body .highlight .nt {
+  color: #22863a; /* Classes and HTML tags */
+}
+
+.vscode-body .highlight .o,
+.vscode-body .highlight .ow {
+  color: #d73a49; /* Operators */
+}
+
+.vscode-body .highlight .nf,
+.vscode-body .highlight .nb,
+.vscode-body .highlight .bp {
+  color: #6f42c1; /* Functions and built-ins */
+}
+
+.vscode-body .highlight .p,
+.vscode-body .highlight .pi {
+  color: #24292e; /* Punctuation */
+}
+
+.vscode-body .highlight .ld,
+.vscode-body .highlight .nl {
+  color: #005cc5; /* Literals */
+}
+
+.vscode-body .highlight .n,
+.vscode-body .highlight .nn,
+.vscode-body .highlight .py,
+.vscode-body .highlight .nv {
+  color: #24292e; /* Variables and names */
+}
+
+/* Additional wrapper classes that GitHub uses */
+.vscode-body .highlight {
+  background-color: #f6f8fa;
+}
+
+.vscode-body .language-json .pl-s .pl-s1,
+.vscode-body .pl-token.pl-property {
+  color: #032f62;
+}
+
+.vscode-body .pl-c,
+.vscode-body .pl-c span {
+  color: #6a737d;
+  font-style: italic;
+}
+
+.vscode-body .pl-mb {
+  font-weight: bold;
+}
+
+.vscode-body .pl-mi {
+  font-style: italic;
+}
+
+.vscode-body .pl-md {
+  background-color: #ffeef0;
+  color: #b31d28;
+}
+
+.vscode-body .pl-mi1 {
+  background-color: #f0fff4;
+  color: #22863a;
 }
