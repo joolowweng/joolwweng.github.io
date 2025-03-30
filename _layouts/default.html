@@ -20,7 +20,9 @@
   <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
       <li class="breadcrumb-item {% if page.url == '/' %}active{% endif %}">
+        {% if page.url == '/' %} Home {% else %}
         <a href="{{ site.baseurl }}/">Home</a>
+        {% endif %}
       </li>
       <li
         class="breadcrumb-item {% if page.url == '/posts/' %}active{% endif %}"
