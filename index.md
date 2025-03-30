@@ -9,6 +9,8 @@ title: Joolowweng
 
 ## [{{ site.posts.first.title }}]({{ site.posts.first.url | relative_url }})
 
-<small>{{ site.posts.first.date | date: "%B %d, %Y" }}</small>
+{{ site.posts.first.date | date: "%B %d, %Y" }}
 
 {{ site.posts.first.content }}
+
+{% endif %}
