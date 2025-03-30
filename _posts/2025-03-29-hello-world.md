@@ -5,7 +5,9 @@ categories: general
 excerpt_separator: <!-- more -->
 ---
 
-## Italic
+A minimalist markdownifier for Jekyll and GitHub Pages, designed to work seamlessly with the VSCode markdown preview.
+
+## Italic Text
 
 This is an example of _italic text_ within a paragraph.
 

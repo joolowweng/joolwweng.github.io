@@ -6,7 +6,7 @@ layout: default
 
 # Joolowweng
 
-Pythonista | Make Programming Great Again | Currently Learning TypeScript
+Pythonista | BA Math at OSU | Making Code Great Again
 
 {% if site.posts.size > 0 %}
 
