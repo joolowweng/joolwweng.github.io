@@ -1,6 +1,5 @@
 ---
 layout: default
-title: Joolowweng
 ---
 
 ![avatar](assets/images/avatar.jpeg)
@@ -11,6 +10,6 @@ title: Joolowweng
 
 {{ site.posts.first.date | date: "%B %d, %Y" }}
 
-{{ site.posts.first.content }}
+{{ site.posts.first.excerpt}}
 
 {% endif %}

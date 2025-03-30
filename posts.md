@@ -7,5 +7,5 @@ title: Posts
 
 {% for post in site.posts %}
 
-- [{{ post.title }}]({{ site.baseurl }}{{ post.url }})
+- [{{ post.title }} - {{ post.date | date: "%B %d, %Y" }}]({{ site.baseurl }}{{ post.url }})
   {% endfor %}
