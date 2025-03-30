@@ -252,6 +252,11 @@ body {
 
 .vscode-body h1[id="joolowweng"] {
   text-align: center;
+  border-bottom: 0px;
+}
+
+.vscode-body h1[id="joolowweng"] + * {
+  text-align: center;
 }
 
 /* Add break line styling for headings */

@@ -6,6 +6,8 @@ layout: default
 
 # Joolowweng
 
+Pythonista | Make Programming Great Again | Currently Learning TypeScript
+
 {% if site.posts.size > 0 %}
 
 ## [{{ site.posts.first.title }}]({{ site.posts.first.url | relative_url }})
