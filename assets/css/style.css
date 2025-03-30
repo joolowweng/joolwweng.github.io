@@ -204,6 +204,10 @@ body {
   background-color: #fafafa;
 }
 
+.vscode-body table tr:first-child {
+  border-top: none;
+}
+
 .vscode-body footer {
   display: flex;
   justify-content: center;
