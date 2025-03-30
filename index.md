@@ -10,6 +10,6 @@ layout: default
 
 {{ site.posts.first.date | date: "%B %d, %Y" }}
 
-{{ site.posts.first.excerpt}}
+{{ site.posts.first.excerpt | markdownify | strip_html | truncatewords: 50 }}
 
 {% endif %}
