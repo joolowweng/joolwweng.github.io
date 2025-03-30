@@ -204,8 +204,12 @@ body {
   background-color: #fafafa;
 }
 
-.vscode-body table tr:first-child {
+.vscode-body table tr:only-of-type td {
   border-top: none;
+}
+/* disable the hover effect if table has only one tr*/
+.vscode-body table tr:only-of-type:hover {
+  background-color: transparent;
 }
 
 .vscode-body footer {
