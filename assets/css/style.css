@@ -250,6 +250,10 @@ body {
   width: 100%;
 }
 
+.vscode-body h1[id="{{ site.title | slugify }}"] {
+  text-align: center;
+}
+
 /* Add break line styling for headings */
 .vscode-body h1,
 .vscode-body h2,
