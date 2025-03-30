@@ -2,6 +2,7 @@
 layout: post
 title: "Hello World"
 categories: general
+excerpt_separator: <!-- more -->
 ---
 
 ## Italic
