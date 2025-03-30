@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Hello World"
+date: 2025-03-30
 categories: general
 ---
 
