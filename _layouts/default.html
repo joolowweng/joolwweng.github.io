@@ -22,6 +22,11 @@
       <li class="breadcrumb-item {% if page.url == '/' %}active{% endif %}">
         <a href="{{ site.baseurl }}/">Home</a>
       </li>
+      <li
+        class="breadcrumb-item {% if page.url == '/about/' %}active{% endif %}"
+      >
+        <a href="{{ site.baseurl }}/about/">About</a>
+      </li>
 
       {% assign url_parts = page.url | split: '/' %} {% assign url_parts_size =
       url_parts | size %} {% assign rm = url_parts | last %} {% assign base_url
@@ -51,13 +56,9 @@
     </ol>
   </nav>
   <body class="vscode-body">
-    <main class="container my-4">{{ content }}</main>
-
-    <footer class="container text-center py-3">
+    <main>{{ content }}</main>
+    <footer>
       <p>&copy; {{ site.time | date: '%Y' }} - {{ site.title }}</p>
     </footer>
-
-    <!-- Bootstrap JS Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
