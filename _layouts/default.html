@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+  <header>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Basic favicon -->
@@ -10,65 +10,47 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-    <!-- Modern favicon options -->
     <title>
       {% if page.url == '/' %}{{ site.title | escape }}{% elsif page.title %}{{
       page.title | escape }} - {{ site.title | escape }}{% else %}{{ site.title
       | escape }}{% endif %}
     </title>
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css" />
-  </head>
-  <body class="vscode-body">
-    <!-- Navigation bar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container">
-        <a class="navbar-brand" href="{{ site.baseurl }}/">{{ site.title }}</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a
-                class="nav-link {% if page.url == '/' %}active{% endif %}"
-                href="{{ site.baseurl }}/"
-                >Home</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link {% if page.url contains '/about/' %}active{% endif %}"
-                href="{{ site.baseurl }}/about/"
-                >About</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link {% if page.url contains '/blog/' %}active{% endif %}"
-                href="{{ site.baseurl }}/blog/"
-                >Blog</a
-              >
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link {% if page.url contains '/contact/' %}active{% endif %}"
-                href="{{ site.baseurl }}/contact/"
-                >Contact</a
-              >
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+  </header>
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item {% if page.url == '/' %}active{% endif %}">
+        <a href="{{ site.baseurl }}/">Home</a>
+      </li>
 
+      {% assign url_parts = page.url | split: '/' %} {% assign url_parts_size =
+      url_parts | size %} {% assign rm = url_parts | last %} {% assign base_url
+      = page.url | replace: rm %} {% for part in url_parts %} {% if
+      forloop.first %} {% continue %} {% endif %} {% assign is_last =
+      forloop.last %} {% capture slug %}{{ part }}{% endcapture %} {% if slug !=
+      "" %} {% capture breadcrumb_path %}{{ site.baseurl }}{% for path_part in
+      url_parts offset:0 limit:forloop.index %}{% if path_part != "" %}/{{
+      path_part }}{% endif %}{% endfor %}{% endcapture %}
+      <li
+        class="breadcrumb-item {% if is_last %}active{% endif %}"
+        {%
+        if
+        is_last
+        %}aria-current="page"
+        {%
+        endif
+        %}
+      >
+        {% if is_last %} {{ slug | capitalize | replace: '-', ' ' }} {% else %}
+        <a href="{{ breadcrumb_path }}/"
+          >{{ slug | capitalize | replace: '-', ' ' }}</a
+        >
+        {% endif %}
+      </li>
+      {% endif %} {% endfor %}
+    </ol>
+  </nav>
+  <body class="vscode-body">
     <main class="container my-4">{{ content }}</main>
 
     <footer class="container text-center py-3">
