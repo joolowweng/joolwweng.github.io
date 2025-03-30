@@ -5,16 +5,16 @@ body {
   line-height: 1.5;
 
   @media (min-width: 0px) and (max-width: 1200px) {
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 20%;
+    margin-right: 20%;
     padding: 0 0%;
     font-size: 1.1em;
     max-width: 100%;
   }
 
   @media (min-width: 1201px) {
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 30%;
+    margin-right: 30%;
   }
 }
 

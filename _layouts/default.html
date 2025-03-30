@@ -25,17 +25,18 @@
       <li
         class="breadcrumb-item {% if page.url == '/posts/' %}active{% endif %}"
       >
+        {% if page.url == '/posts/' %} Posts {% else %}
         <a href="{{ site.baseurl }}/posts/">Posts</a>
+        {% endif %}
       </li>
 
-      {% assign url_parts = page.url | split: '/' %} {% assign url_parts_size =
-      url_parts | size %} {% assign rm = url_parts | last %} {% assign base_url
-      = page.url | replace: rm %} {% for part in url_parts %} {% if
-      forloop.first %} {% continue %} {% endif %} {% assign is_last =
-      forloop.last %} {% capture slug %}{{ part }}{% endcapture %} {% if slug !=
-      "" %} {% capture breadcrumb_path %}{{ site.baseurl }}{% for path_part in
-      url_parts offset:0 limit:forloop.index %}{% if path_part != "" %}/{{
-      path_part }}{% endif %}{% endfor %}{% endcapture %}
+      {% assign url_parts = page.url | split: '/' %} {% if url_parts.size > 2
+      and url_parts[1] == 'posts' %} {% for part in url_parts %} {% if
+      forloop.first or forloop.index == 2 %} {% continue %} {% endif %} {%
+      assign is_last = forloop.last %} {% capture slug %}{{ part }}{% endcapture
+      %} {% if slug != "" %} {% capture breadcrumb_path %}{{ site.baseurl }}{%
+      for path_part in url_parts offset:0 limit:forloop.index %}{% if path_part
+      != "" %}/{{ path_part }}{% endif %}{% endfor %}{% endcapture %}
       <li
         class="breadcrumb-item {% if is_last %}active{% endif %}"
         {%
@@ -52,7 +53,7 @@
         >
         {% endif %}
       </li>
-      {% endif %} {% endfor %}
+      {% endif %} {% endfor %} {% endif %}
     </ol>
   </nav>
   <body class="vscode-body">
