@@ -27,6 +27,12 @@ body {
   top: -0.1em;
 }
 
+.vscode-body li.task-list-item {
+  list-style: none;
+  margin-left: -20px;
+  padding-left: 0;
+}
+
 .vscode-body strong {
   color: #000000;
   font-weight: bold;
