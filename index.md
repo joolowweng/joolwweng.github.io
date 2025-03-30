@@ -12,6 +12,6 @@ layout: default
 
 {{ site.posts.first.date | date: "%B %d, %Y" }}
 
-{{ site.posts.first.content | markdownify | strip_html | truncatewords: 100 }}
+{{ site.posts.first.content | markdownify | truncatewords: 100 }}
 
 {% endif %}
