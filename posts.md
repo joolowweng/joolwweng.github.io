@@ -1,3 +1,8 @@
+---
+layout: default
+title: Posts
+---
+
 ## Posts
 
 {% for post in site.posts %}
