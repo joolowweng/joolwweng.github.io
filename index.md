@@ -12,6 +12,7 @@ layout: default
 
 {{ site.posts.first.date | date: "%B %d, %Y" }}
 
-{{ site.posts.first.content | markdownify | truncatewords: 100 }}
+{{ site.posts.first.excerpt | markdownify }}
+[Read more]({{ site.posts.first.url | relative_url }})
 
 {% endif %}

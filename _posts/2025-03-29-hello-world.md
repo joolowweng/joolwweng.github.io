@@ -12,6 +12,8 @@ This is an example of _italic text_ within a paragraph.
 
 > This is a blockquote.
 
+<!-- more -->
+
 ## Bold Text
 
 **Important note:** This text will have highlight styling.
