@@ -250,7 +250,7 @@ body {
   width: 100%;
 }
 
-.vscode-body h1[id="{{ site.title | slugify }}"] {
+.vscode-body h1[id="joolowweng"] {
   text-align: center;
 }
 
