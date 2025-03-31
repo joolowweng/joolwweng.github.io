@@ -1,7 +1,6 @@
 ---
 layout: default
-title: Posts
-category: journal
+title: Journal
 ---
 
 ## Journal
