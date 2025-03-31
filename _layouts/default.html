@@ -11,52 +11,64 @@
       rel="stylesheet"
     />
     <title>
-      {% if page.url == '/' %}{{ site.title | escape }}{% elsif page.title %}{{
-      page.title | escape }} - {{ site.title | escape }}{% else %}{{ site.title
-      | escape }}{% endif %}
+      {% if page.url == '/' %}
+        {{ site.title | escape }}
+      {% elsif page.title %}
+        {{ page.title | escape }} - {{ site.title | escape }}
+      {% else %}
+        {{ site.title | escape }}
+      {% endif %}
     </title>
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css" />
   </header>
   <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
       <li class="breadcrumb-item {% if page.url == '/' %}active{% endif %}">
-        {% if page.url == '/' %} Home {% else %}
-        <a href="{{ site.baseurl }}/">Home</a>
+        {% if page.url == '/' %}
+          Home
+        {% else %}
+          <a href="{{ site.baseurl }}/">Home</a>
         {% endif %}
       </li>
+
       {% for category in site.categories %}
-      <li class="breadcrumb-item {% if page.url == '/{{ category }}' %}active{% endif %}">
-        {% if page.url == '/{{ category }}' %} {{ category | capitalize }} {% else %}
-        <a href="{{ site.baseurl }}/{{ category | downcase }}/">{{ category | capitalize }}</a
+        <li class="breadcrumb-item {% if page.url == '/{{ category | downcase }}' %}active{% endif %}">
+          {% if page.url == '/{{ category | downcase }}' %}
+            {{ category | capitalize }}
+          {% else %}
+            <a href="{{ site.baseurl }}/{{ category | downcase }}/">{{ category | capitalize }}</a>
+          {% endif %}
         </li>
-        {% endif %}>
       {% endfor %}
 
       {% assign url_parts = page.url | split: '/' %}
       {% if url_parts.size > 2 and url_parts[1] == 'posts' %}
-      {% for part in url_parts %}
-      {% if forloop.first or forloop.index == 2 %} {% continue %}
+        {% for part in url_parts %}
+          {% if forloop.first or forloop.index == 2 %}
+            {% continue %}
+          {% endif %}
+
+          {% assign is_last = forloop.last %}
+          {% capture slug %}{{ part }}{% endcapture %}
+
+          {% if slug != "" %}
+            {% capture breadcrumb_path %}
+              {{ site.baseurl }}{% for path_part in url_parts offset:0 limit:forloop.index %}
+                {% if path_part != "" %}/{{ path_part }}{% endif %}
+              {% endfor %}
+            {% endcapture %}
+
+            <li class="breadcrumb-item {% if is_last %}active{% endif %}"
+                {% if is_last %}aria-current="page"{% endif %}>
+              {% if is_last %}
+                {{ slug | capitalize | replace: '-', ' ' }}
+              {% else %}
+                <a href="{{ breadcrumb_path }}/">{{ slug | capitalize | replace: '-', ' ' }}</a>
+              {% endif %}
+            </li>
+          {% endif %}
+        {% endfor %}
       {% endif %}
-      {% assign is_last = forloop.last %}
-      {% capture slug %}{{ part }}{% endcapture %}
-      {% if slug != "" %} {% capture breadcrumb_path %}{{ site.baseurl }}{% for path_part in url_parts offset:0 limit:forloop.index %}{% if path_part != "" %}/{{ path_part }}{% endif %}{% endfor %}{% endcapture %}
-      <li
-        class="breadcrumb-item {% if is_last %}active{% endif %}"
-        {%
-        if
-        is_last
-        %}aria-current="page"
-        {%
-        endif
-        %}
-      >
-        {% if is_last %} {{ slug | capitalize | replace: '-', ' ' }} {% else %}
-        <a href="{{ breadcrumb_path }}/"
-          >{{ slug | capitalize | replace: '-', ' ' }}</a
-        >
-        {% endif %}
-      </li>
-      {% endif %} {% endfor %} {% endif %}
     </ol>
   </nav>
   <body class="vscode-body">
