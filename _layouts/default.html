@@ -32,11 +32,13 @@
       </li>
 
       {% for category in site.categories %}
-        <li class="breadcrumb-item {% if page.url == '/{{ category | downcase }}' %}active{% endif %}">
-          {% if page.url == '/{{ category | downcase }}' %}
-            {{ category | capitalize }}
+        {% assign category_name = category[0] | downcase %}
+        {% assign category_url = '/' | append: category_name | append: '/' %}
+        <li class="breadcrumb-item {% if page.url == category_url %}active{% endif %}">
+          {% if page.url == category_url %}
+            {{ category[0] | capitalize }}
           {% else %}
-            <a href="{{ site.baseurl }}/{{ category | downcase }}/">{{ category | capitalize }}</a>
+            <a href="{{ site.baseurl }}{{ category_url }}">{{ category[0] | capitalize }}</a>
           {% endif %}
         </li>
       {% endfor %}
