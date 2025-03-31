@@ -96,31 +96,6 @@ body {
   padding: 5px 5px;
 }
 
-.vscode-body blockquote:before {
-  content: "";
-  position: absolute;
-  z-index: 0;
-  bottom: 0;
-  left: -7px;
-  height: 20px;
-  width: 20px;
-  background: linear-gradient(to bottom, #00d0ea 0%, #0085d1 100%);
-  background-attachment: fixed;
-  border-bottom-right-radius: 15px;
-}
-
-.vscode-body blockquote:after {
-  content: "";
-  position: absolute;
-  z-index: 1;
-  bottom: 0;
-  left: -10px;
-  width: 10px;
-  height: 20px;
-  background: white;
-  border-bottom-right-radius: 10px;
-}
-
 .vscode-body table {
   padding: 0;
   border-collapse: separate;
