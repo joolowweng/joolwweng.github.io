@@ -6,7 +6,7 @@ layout: default
 
 # Joolowweng
 
-Pythonista | BA Math at [OSU](https://www.threads.net/@theohiostateuniversity) | Make Code Great Again
+Pythonista | BA Math at [OSU](https://www.threads.net/@theohiostateuniversity) | Make Coding Great Again
 
 {% if site.posts.size > 0 %}
 
