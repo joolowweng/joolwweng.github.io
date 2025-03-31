@@ -24,25 +24,22 @@
         <a href="{{ site.baseurl }}/">Home</a>
         {% endif %}
       </li>
-      {% for category in site.categories %} {% capture category_name %}{%
-      endcapture %}
-      <li
-        class="breadcrumb-item {% if page.url == '/{{ category_name }}' %}active{% endif %}"
-      >
-        {% if page.url == '/{{ category_name }}' %} {{ category_name |
-        capitalize }} {% else %}
-        <a href="{{ site.baseurl }}/{{ category_name | downcase }}/"
-          >{{ category_name | capitalize }}</a
-        >
-      </li>
-      {% endif %} {% endfor %} {% assign url_parts = page.url | split: '/' %} {%
-      if url_parts.size > 2 and url_parts[1] == 'posts' %} {% for part in
-      url_parts %} {% if forloop.first or forloop.index == 2 %} {% continue %}
-      {% endif %} {% assign is_last = forloop.last %} {% capture slug %}{{ part
-      }}{% endcapture %} {% if slug != "" %} {% capture breadcrumb_path %}{{
-      site.baseurl }}{% for path_part in url_parts offset:0 limit:forloop.index
-      %}{% if path_part != "" %}/{{ path_part }}{% endif %}{% endfor %}{%
-      endcapture %}
+      {% for category in site.categories %}
+      <li class="breadcrumb-item {% if page.url == '/{{ category }}' %}active{% endif %}">
+        {% if page.url == '/{{ category }}' %} {{ category | capitalize }} {% else %}
+        <a href="{{ site.baseurl }}/{{ category | downcase }}/">{{ category | capitalize }}</a
+        </li>
+        {% endif %}>
+      {% endfor %}
+
+      {% assign url_parts = page.url | split: '/' %}
+      {% if url_parts.size > 2 and url_parts[1] == 'posts' %}
+      {% for part in url_parts %}
+      {% if forloop.first or forloop.index == 2 %} {% continue %}
+      {% endif %}
+      {% assign is_last = forloop.last %}
+      {% capture slug %}{{ part }}{% endcapture %}
+      {% if slug != "" %} {% capture breadcrumb_path %}{{ site.baseurl }}{% for path_part in url_parts offset:0 limit:forloop.index %}{% if path_part != "" %}/{{ path_part }}{% endif %}{% endfor %}{% endcapture %}
       <li
         class="breadcrumb-item {% if is_last %}active{% endif %}"
         {%
