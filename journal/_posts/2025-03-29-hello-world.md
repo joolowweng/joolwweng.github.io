@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Hello World"
-categories: general
+categories: journal
 excerpt_separator: <!-- more -->
 ---
 
