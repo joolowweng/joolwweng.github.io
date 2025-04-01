@@ -1,7 +1,7 @@
 title: Joolowweng
 description: ""
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: ""
+url: "https://joolowweng.github.io" # Your domain
 
 # Build settings
 markdown: kramdown
