@@ -12,7 +12,7 @@ Pythonista | BA Math at [OSU](https://www.threads.net/@theohiostateuniversity) |
 
 ## [{{ site.posts.first.title }}]({{ site.posts.first.url | relative_url }})
 
-{{ site.posts.first.categories | first | capitalize }} | {{ site.posts.first.date | date: "%B %d, %Y" }}
+{{ site.posts.first.categories | first | capitalize }} - {{ site.posts.first.date | date: "%B %d, %Y" }}
 
 {{ site.posts.first.excerpt | markdownify }}
 [Read more]({{ site.posts.first.url | relative_url }})
@@ -24,7 +24,7 @@ Pythonista | BA Math at [OSU](https://www.threads.net/@theohiostateuniversity) |
 
 ## [{{ post.title }}]({{ post.url | relative_url }})
 
-{{ post.categories | first | capitalize }} | {{ post.date | date: "%B %d, %Y" }}
+{{ post.categories | first | capitalize }} - {{ post.date | date: "%B %d, %Y" }}
 
 {% endif %}
 {% endfor %}
