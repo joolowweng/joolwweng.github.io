@@ -2,9 +2,9 @@ source "https://rubygems.org"
 
 # Use GitHub Pages
 gem "github-pages", group: :jekyll_plugins
-
 # If you have any plugins, put them here!
 group :jekyll_plugins do
+  gem 'jekyll-archives'
   # Add Jekyll plugins here if needed
 end
 

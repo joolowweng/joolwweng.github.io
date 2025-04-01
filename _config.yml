@@ -16,3 +16,14 @@ exclude:
   - node_modules
   - vendor
   - .vscode
+
+plugins:
+  - jekyll-archives
+
+jekyll-archives:
+  enabled:
+    - categories
+  layouts:
+    category: category-archive
+  permalinks:
+    category: /:name/
