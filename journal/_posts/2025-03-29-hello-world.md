@@ -7,6 +7,8 @@ excerpt_separator: <!-- more -->
 
 A minimalist markdownifier for Jekyll and GitHub Pages, designed to work seamlessly with the VSCode markdown preview.
 
+<!-- more -->
+
 ## Italic Text
 
 This is an example of _italic text_ within a paragraph.
@@ -14,8 +16,6 @@ This is an example of _italic text_ within a paragraph.
 ## Blockquote
 
 > This is a blockquote.
-
-<!-- more -->
 
 ## Bold Text
 
