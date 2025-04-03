@@ -2,7 +2,7 @@
 layout: default
 ---
 
-![avatar](assets/images/avatar.jpeg)
+![avatar](assets/images/avatar.png)
 
 # Joolowweng
 
